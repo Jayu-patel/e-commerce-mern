@@ -8,7 +8,7 @@ const createAdmin = require("./utils/createAdmin")
 require('dotenv').config()
 
 app.use(cors({
-    origin: "https://e-commerce-mern-frontend-six.vercel.app"
+    origin: "https://e-commerce-mern-frontend-six"
 }))
 app.use(express.json())
 app.use(cookieParser())
