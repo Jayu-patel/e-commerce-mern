@@ -7,6 +7,8 @@ const createAdmin = require("./utils/createAdmin")
 
 require('dotenv').config()
 
+const port = process.env.PORT || 8000
+
 app.use(cors({
     origin: "https://e-commerce-mern-frontend-six.vercel.app"
 }))
@@ -34,4 +36,4 @@ app.use("/api/stripe", stripeRoute)
 app.use("/",(req,res)=>{
     res.send("server is running")
 })
-app.listen(8000,()=>{console.log("server started...")})
+app.listen(port,()=>{console.log("server started...")})
